@@ -1,0 +1,23 @@
+# Multi-Agent Interview Coach - Dependencies
+# Python 3.10+
+
+# LangChain ecosystem
+langchain>=0.3.0
+langchain-openai>=0.2.0
+langgraph>=0.2.0
+langchain-community>=0.3.0
+
+# OpenAI
+openai>=1.50.0
+
+# Search tool for fact-checking
+ddgs>=7.0.0
+
+# Environment variables
+python-dotenv>=1.0.0
+
+# Utilities
+pydantic>=2.0.0
+
+# Rich console output
+rich>=13.0.0
