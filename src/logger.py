@@ -24,11 +24,9 @@ class InterviewLogger:
         self.current_session: dict = {}
         self.session_file: Optional[Path] = None
     
-    def start_session(self, participant_name: str, metadata: dict) -> str:
+    def start_session(self, participant_name: str, scenario_id: int) -> str:
         """Начинает новую сессию логирования"""
-        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        safe_name = "".join(c for c in participant_name if c.isalnum() or c in " _-").strip()
-        filename = f"interview_{safe_name}_{timestamp}.json"
+        filename = f"interview_log_{scenario_id}.json"
         self.session_file = self.logs_dir / filename
         
         self.current_session = {

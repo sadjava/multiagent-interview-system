@@ -196,7 +196,7 @@ def run_interview(args):
     
     # Создаем логгер
     logger = InterviewLogger()
-    log_path = logger.start_session(candidate["name"], candidate)
+    log_path = logger.start_session("Садреддинов Джавид Ханбаба оглы", args.scenario)
     print_styled(console, f"\n📁 Лог сохраняется в: {log_path}\n", "dim")
     
     # Создаем Interview Coach
@@ -288,7 +288,7 @@ def run_interview(args):
             logger.log_final_feedback(feedback)
         
         # Сохраняем лог
-        final_log_path = save_interview_log(coach, logger)
+        final_log_path = save_interview_log(coach, logger, args.scenario)
         print_styled(console, f"\n📁 Лог сохранен: {final_log_path}\n", "bold green")
         
         # Показываем краткую статистику
